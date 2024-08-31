@@ -409,3 +409,120 @@ rm -r ca.crt chained.crt server.crt server.key sub-ca.crt
 cd
 cd ca
 tree
+mkdir -p ca/{root-ca,sub-ca,server}/{private,certs,newcerts,crl,csr}
+chmod -v 700 ca/{root-ca,sub-ca,server}/private
+touch ca/{root-ca,sub-ca}/index
+openssl rand -hex 16
+openssl rand -hex 16 > ca/root-ca/serial
+openssl rand -hex 16 > ca/sub-ca/serial
+cd ca
+openssl genrsa -aes256 -out root-ca/private/ca.key 4096
+openssl genrsa -aes256 -out sub-ca/private/sub-ca.key 4096
+openssl genrsa -out server/private/server.key 2048
+gedit root-ca/root-ca.conf
+cd root-ca
+openssl req -config root-ca.conf -key private/ca.key -new -x509 -days 7305 -sha256 -extensions v3_ca -out certs/ca.crt
+openssl x509 -noout -in certs/ca.crt -text
+cd ../sub-ca
+gedit sub-ca.conf
+openssl req -config sub-ca.conf -new -key private/sub-ca.key -sha256 -out csr/sub-ca.csr
+cd -
+openssl ca -config root-ca.conf -extensions v3_intermediate_ca -days 3652 -notext -in ../sub-ca/csr/sub-ca.csr -out ../sub-ca/certs/sub-ca.crt
+cat index
+openssl x509 -noout -text -in ../sub-ca/certs/sub-ca.crt
+cd ../server
+openssl req -key private/server.key -new -sha256 -out csr/server.csr
+cd ../sub-ca
+openssl ca -config sub-ca.conf -extensions server_cert -days 365 -notext -in ../server/csr/server.csr -out ../server/certs/server.crt
+cat index
+echo "127.0.0.2 www.verysecureserver.com" >> /etc/hosts
+ping www.verysecureserver.com
+cd ..
+tree
+cd ..
+ls
+git init
+git add .
+git commit -m "certificates modified"
+git push -u origin master
+git add .
+git commit -m "certificates file"
+git push -u origin master
+cd ca
+cd sub-ca
+ls
+cd newcerts
+ls
+cp 532BF9D6CD5F2F4C104E914D703C47B8.pem /home/arnob/desktop
+cp 532BF9D6CD5F2F4C104E914D703C47B8.pem /home/arnob
+cd -
+cd ..
+ls
+cd root-ca
+ls
+cd newcerts
+ls
+cp 89104B136ED3C3FD34C26F071D5A7B4C.pem /home/arnob
+cd .
+cd ..
+cat index
+cd ..
+ls
+cd sub--ca
+cd sub-ca
+ls
+cat index
+cd ..
+ls
+cd sever
+cd server
+ls
+ls newcerts
+cd newcerts
+ls
+cd ca
+ls
+cd server
+openssl req -key private/server.key -new -sha256 -out csr/server.csr
+cd ../sub-ca
+openssl ca -config sub-ca.conf -extensions server_cert -days 365 -notext -in ../server/csr/server.csr -out ../server/certs/server.crt
+cat  index
+cd
+cd ca
+cd server
+cd certs
+ls
+cat server.crt
+cd ..
+ls
+cd private
+cat server.key
+cd ..
+ls
+cd server
+ls
+cd csr
+ls
+cat server.csr
+cd ../
+cd ..
+ls
+cd ca
+ls
+cd ..
+cd ca
+cd sub-ca
+ls
+cat index
+cd ..
+ls
+openssl x509 -noout -text -in ../sub-ca/certs/sub-ca.crt
+openssl x509 -noout -text -in /sub-ca/certs/sub-ca.crt
+cd sub-ca
+ls
+openssl x509 -noout -text -in certs/sub-ca.crt
+cd ..
+cd server
+ls
+cd certs
+openssl x509 -noout -text -in server.crt
