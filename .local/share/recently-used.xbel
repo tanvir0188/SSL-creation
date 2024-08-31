@@ -3,7 +3,7 @@
       xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
       xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
 >
-  <bookmark href="file:///root/ca/root-ca/root-ca.conf" added="2024-08-30T04:39:17Z" modified="2024-08-30T04:55:47Z" visited="2024-08-30T04:39:18Z">
+  <bookmark href="file:///root/ca/root-ca/root-ca.conf" added="2024-08-30T04:39:17Z" modified="2024-08-31T05:30:42Z" visited="2024-08-30T04:39:18Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="text/plain"/>
@@ -11,12 +11,12 @@
           <bookmark:group>gedit</bookmark:group>
         </bookmark:groups>
         <bookmark:applications>
-          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2024-08-30T04:55:47Z" count="3"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2024-08-31T05:30:42Z" count="5"/>
         </bookmark:applications>
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///root/ca/sub-ca/sub-ca.conf" added="2024-08-30T05:01:57Z" modified="2024-08-30T05:01:57Z" visited="2024-08-30T05:01:57Z">
+  <bookmark href="file:///root/ca/sub-ca/sub-ca.conf" added="2024-08-30T05:01:57Z" modified="2024-08-31T05:33:49Z" visited="2024-08-30T05:01:57Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="text/plain"/>
@@ -24,7 +24,7 @@
           <bookmark:group>gedit</bookmark:group>
         </bookmark:groups>
         <bookmark:applications>
-          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2024-08-30T05:01:57Z" count="1"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2024-08-31T05:33:49Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
@@ -51,6 +51,58 @@
         </bookmark:groups>
         <bookmark:applications>
           <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2024-08-30T06:47:18Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///opt/lampp/etc/extra/httpd-ssl.conf" added="2024-08-30T14:38:26Z" modified="2024-08-31T04:34:28Z" visited="2024-08-30T14:38:27Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2024-08-31T04:34:28Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///opt/lampp/htdocs/index.html" added="2024-08-30T15:10:16Z" modified="2024-08-30T15:17:19Z" visited="2024-08-30T15:10:16Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2024-08-30T15:17:19Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///root/ca/root-ca/index" added="2024-08-30T15:35:05Z" modified="2024-08-30T15:35:38Z" visited="2024-08-30T15:35:05Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2024-08-30T15:35:38Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///etc/hosts" added="2024-08-30T15:46:44Z" modified="2024-08-30T15:48:23Z" visited="2024-08-30T15:46:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2024-08-30T15:48:23Z" count="3"/>
         </bookmark:applications>
       </metadata>
     </info>
