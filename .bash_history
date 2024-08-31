@@ -402,3 +402,10 @@ ls
 cd sub-ca
 cat index
 sudo -i
+ls
+cd certificate
+ls
+rm -r ca.crt chained.crt server.crt server.key sub-ca.crt
+cd
+cd ca
+tree
